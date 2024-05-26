@@ -1,0 +1,53 @@
+name: Curation Issue Template
+description: Start a variant curation issue.
+title: "[chr:pos][variant type][short description]"
+projects: #["project_name"] project should be enabled in the repo by admin
+assigness:
+  - jzook
+body:
+  - type: dropdown
+    id: dataset
+    attributes:
+      label: Tumor/Normal dataset
+      description: Tumor/Normal dataset used for variant calling
+      multiple: true
+      options:
+        - HG008-N-P and HG008-T Passage 23
+        - HG008-N-D and HG008-T Passage 23
+        - HG008-N-P and HG008-T Spring 22 Passage 36
+        - HG008-N-P normal only
+        - HG008-N-D normal only
+        - HG008-T Passage 23 tumor only
+        - HG008-T Spring 22 Passage 36 tumor only
+    validations:
+      required: true
+  - type: dropdown
+    id: technology
+    attributes:
+      label: Sequencing Technology
+      description: Select all that apply
+      multiple: true
+      option:
+        - Illumina WGS
+        - Element - AVITI - short insert - (~350bp)
+        - Element - AVITI - long insert (1000+ bp)
+        - PacBio Onso
+        - Ultima UG100
+        - BioSkryb single-cell WGS - Illumina
+        - BioSkryb single-cell WGS - Ultima
+        - Oxford Nanopore Technologies (UL)
+        - Oxforn Nanopore Technologies (duplex)
+        - Oxforn Nanopore Technologies (std)
+        - PacBio HiFi (Revio)
+        - Bionano Optical Mapping
+        - Arima and Phase Genomics HiC - Illumina
+        - Karyologic karyotyping
+      validations:
+        required: true
+  - type: textarea
+    id: variant-caller
+    attributes:
+      label: Variant Caller(s)
+      description: Variant callers used for variant calling
+    validations:
+      required: true
