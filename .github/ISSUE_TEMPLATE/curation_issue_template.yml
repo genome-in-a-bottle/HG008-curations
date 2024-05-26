@@ -41,8 +41,8 @@ body:
         - Bionano Optical Mapping
         - Arima and Phase Genomics HiC - Illumina
         - Karyologic karyotyping
-      validations:
-        required: true
+    validations:
+      required: true
   - type: textarea
     id: variant-caller
     attributes:
