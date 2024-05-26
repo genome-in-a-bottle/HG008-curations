@@ -1,9 +1,8 @@
 name: Curation Issue Template
 description: Start a variant curation issue.
 title: "[chr:pos][variant type][short description]"
-projects: #["project_name"] project should be enabled in the repo by admin
-assigness:
-  - jzook
+assignees:
+  - Faizal-Eeman
 body:
   - type: dropdown
     id: dataset
@@ -27,7 +26,7 @@ body:
       label: Sequencing Technology
       description: Select all that apply
       multiple: true
-      option:
+      options:
         - Illumina WGS
         - Element - AVITI - short insert - (~350bp)
         - Element - AVITI - long insert (1000+ bp)
