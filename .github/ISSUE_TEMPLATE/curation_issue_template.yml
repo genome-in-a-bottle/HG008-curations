@@ -43,6 +43,14 @@ body:
         - Karyologic karyotyping
     validations:
       required: true
+  - type: input
+    id: variant-type
+    attributes:
+      label: Variant Type
+      placeholder: |
+        SNV or INDEL
+        SV - Inversion, Translocation, etc.
+        CNA - Deletion, Duplication, LOH, etc.
   - type: textarea
     id: variant-caller
     attributes:
