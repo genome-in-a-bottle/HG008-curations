@@ -55,7 +55,15 @@ body:
     attributes:
       label: Variant Details
       description: Provide variant details
-      placeholder: chr:position/\n ID:\n Ref:\n Alt:\n Please include INFO and FORMAT fields in separate lines\n AD:\n DP:\n etc.re
+      placeholder: |
+        chr:position
+        ID:
+        Ref:
+        Alt:
+        Please include INFO and FORMAT fields in separate lines
+        AD:
+        DP:
+        etc.
     validations:
       required: true
   - type: textarea
