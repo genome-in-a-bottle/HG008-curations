@@ -50,3 +50,18 @@ body:
       description: Variant callers used for variant calling
     validations:
       required: true
+  - type: textarea
+    id: variant-detail
+    attributes:
+      label: Variant Details
+      description: Provide variant details
+      placeholder: chr:position\n ID:\n Ref:\n Alt:\n Please include INFO and FORMAT fields in separate lines\n AD:\n DP:\n etc.re
+    validations:
+      required: true
+  - type: textarea
+    id: visualization
+    attributes:
+      label: Visualization
+      description: Add IGV snapshots or any relevant plots
+    validations:
+      required: true
