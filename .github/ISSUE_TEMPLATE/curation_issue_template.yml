@@ -1,6 +1,7 @@
 name: Curation Issue Template
 description: Start a variant curation issue.
 title: "[chr:pos][variant type][short description]"
+projects: ["genome-in-a-bottle/1"]
 assignees:
   - Faizal-Eeman
 body:
