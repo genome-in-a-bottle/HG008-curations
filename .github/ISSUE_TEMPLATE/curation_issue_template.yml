@@ -1,0 +1,84 @@
+name: Curation Issue Template
+description: Start a variant curation issue.
+title: "[chr:pos][variant type][short description]"
+projects: ["genome-in-a-bottle/1"]
+assignees:
+  - jzook
+body:
+  - type: dropdown
+    id: dataset
+    attributes:
+      label: Tumor/Normal dataset
+      description: Tumor/Normal dataset used for variant calling
+      multiple: true
+      options:
+        - HG008-T Passage 23 vs HG008-N-P
+        - HG008-T Passage 23 vs HG008-N-D
+        - HG008-T Spring 22 Passage 36 vs HG008-N-P
+        - HG008-N-P normal only
+        - HG008-N-D normal only
+        - HG008-T Passage 23 tumor only
+        - HG008-T Spring 22 Passage 36 tumor only
+    validations:
+      required: true
+  - type: dropdown
+    id: technology
+    attributes:
+      label: Sequencing Technology
+      description: Select all that apply
+      multiple: true
+      options:
+        - Illumina WGS
+        - Element - AVITI - short insert - (~350bp)
+        - Element - AVITI - long insert (1000+ bp)
+        - PacBio Onso
+        - Ultima UG100
+        - BioSkryb single-cell WGS - Illumina
+        - BioSkryb single-cell WGS - Ultima
+        - Oxford Nanopore Technologies (UL)
+        - Oxforn Nanopore Technologies (duplex)
+        - Oxforn Nanopore Technologies (std)
+        - PacBio HiFi (Revio)
+        - Bionano Optical Mapping
+        - Arima and Phase Genomics HiC - Illumina
+        - Karyologic karyotyping
+    validations:
+      required: true
+  - type: input
+    id: variant-type
+    attributes:
+      label: Variant Type
+      placeholder: |
+        SNV or INDEL
+        SV - Inversion, Translocation, etc.
+        CNA - Deletion, Duplication, LOH, etc.
+  - type: textarea
+    id: variant-caller
+    attributes:
+      label: Variant Caller(s)
+      description: Variant callers used for variant calling
+    validations:
+      required: true
+  - type: textarea
+    id: variant-detail
+    attributes:
+      label: Variant Details
+      description: Provide variant details
+      placeholder: |
+        chr:position
+        ID:
+        Ref:
+        Alt:
+        Please include INFO and FORMAT fields in separate lines
+        AD:
+        DP:
+        etc.
+    validations:
+      required: true
+  - type: textarea
+    id: visualization
+    attributes:
+      label: Visualization
+      description: Add IGV snapshots or any relevant plots
+    validations:
+      required: true
