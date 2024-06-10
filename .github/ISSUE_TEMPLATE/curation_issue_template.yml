@@ -12,9 +12,9 @@ body:
       description: Tumor/Normal dataset used for variant calling
       multiple: true
       options:
-        - HG008-N-P and HG008-T Passage 23
-        - HG008-N-D and HG008-T Passage 23
-        - HG008-N-P and HG008-T Spring 22 Passage 36
+        - HG008-T Passage 23 vs HG008-N-P
+        - HG008-T Passage 23 vs HG008-N-D
+        - HG008-T Spring 22 Passage 36 vs HG008-N-P
         - HG008-N-P normal only
         - HG008-N-D normal only
         - HG008-T Passage 23 tumor only
